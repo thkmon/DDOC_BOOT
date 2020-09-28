@@ -20,6 +20,9 @@ cache:
 # 프로젝트 내부의 gradlew 를 통해 clean 과 build 수행
 script: "./gradlew clean build"
 
+before_install:
+  - chmod +x gradlew
+
 # CI 실행 완료 시 메일로 알람
 notifications:
   email:
