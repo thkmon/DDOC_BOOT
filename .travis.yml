@@ -20,6 +20,23 @@ cache:
 # 프로젝트 내부의 gradlew 를 통해 clean 과 build 수행
 script: "./gradlew clean build"
 
+before_deploy:
+  - zip -r ddoc *
+  - mkdir -p deploy
+  - mv ddoc.zip deploy/ddoc.zip
+
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY # Travis repo settings 에 설정된 값
+    secret_access_key: $AWS_SECRET_KEY # Travis repo settings 에 설정된 값
+    bucket: ddocbucket # S3 버킷
+    regin: ap-northeast-2
+    skip_cleanup: true
+    acl: private # zip 파일 접근을 private 으로
+    local_dir: deploy #before_deploy 에서 생성한 디렉토리
+    wait-until-deployed: true
+
+# ./gradlew: Permission denied 오류 메시지 방지
 before_install:
   - chmod +x gradlew
 
