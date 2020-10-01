@@ -1,3 +1,5 @@
+# .travis.yml : Travis CI 의 설정파일
+
 language: java
 jdk:
   - openjdk8
