@@ -21,6 +21,8 @@ public class IndexController {
 
     @GetMapping("/")
     public String index(Model model, @LoginUser SessionUser user) {
+        return "index.html";
+        /*
         model.addAttribute("posts", postsService.findAllDesc());
 
         // SessionUser user = (SessionUser) httpSession.getAttribute("user");
@@ -33,6 +35,7 @@ public class IndexController {
         }
 
         return "index";
+        */
     }
 
 

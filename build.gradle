@@ -39,7 +39,12 @@ dependencies {
     compile('com.h2database:h2')
     compile('org.mariadb.jdbc:mariadb-java-client')
 
-    compile('org.springframework.boot:spring-boot-starter-mustache')
+    // mustache 템플릿 사용
+    // compile('org.springframework.boot:spring-boot-starter-mustache')
+
+    // jsp 사용
+    compile('org.apache.tomcat.embed:tomcat-embed-jasper')
+    compile('javax.servlet:jstl:1.2')
 
     // 스프링 시큐리티 관련 의존성 추가
     compile('org.springframework.boot:spring-boot-starter-oauth2-client')
