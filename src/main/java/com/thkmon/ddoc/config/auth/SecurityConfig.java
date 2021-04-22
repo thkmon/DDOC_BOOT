@@ -1,3 +1,4 @@
+/*
 package com.thkmon.ddoc.config.auth;
 
 import com.thkmon.ddoc.domain.user.Role;
@@ -32,3 +33,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .userService(customOAuth2UserService);
     }
 }
+*/

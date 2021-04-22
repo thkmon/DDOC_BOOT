@@ -47,7 +47,7 @@ dependencies {
     compile('javax.servlet:jstl:1.2')
 
     // 스프링 시큐리티 관련 의존성 추가
-    compile('org.springframework.boot:spring-boot-starter-oauth2-client')
+    // compile('org.springframework.boot:spring-boot-starter-oauth2-client')
 
     compile('org.springframework.session:spring-session-jdbc')
 

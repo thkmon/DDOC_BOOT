@@ -1,3 +1,4 @@
+/*
 package com.thkmon.ddoc.config.auth;
 
 import com.thkmon.ddoc.config.auth.dto.OAuthAttributes;
@@ -52,3 +53,4 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         return userRepository.save(user);
     }
 }
+*/
